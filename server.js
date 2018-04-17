@@ -29,8 +29,8 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "generate":
-            if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
-            else message.channel.sendMessage("Generating...");
+            if (args[1]) message.author.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
+            message.channel.sendMessage("**Generating...**");
             break;
         default:
             message.channel.sendMessage("Invalid command")
