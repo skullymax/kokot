@@ -12,7 +12,7 @@ var fortunes = [
 
 var bot = new Discord.Client();
 
-bot.on("ready",function(){
+bot.on("ready",function() {
     console.log("READY");
     bot.user.setGame("/help | by skullymax");
 });
