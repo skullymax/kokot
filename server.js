@@ -3,9 +3,16 @@ const Discord = require ("discord.js");
 const TOKEN = "NDM0MTI0NzQ2ODIxNDY4MTYw.DbedHg.JusQksZk_OQLnTZgRtoKp7FpekM"
 const PREFIX = "/"
 
+var fortunes = [
+    "Yes",
+    "No",
+    "Maybe",
+    "never"
+];
+
 var bot = new Discord.Client();
 
-bot.on("ready",function(){
+bot.on("ready",function() {
     console.log("READY");
     bot.user.setGame("/help | by skullymax");
 });
@@ -20,6 +27,9 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
         case "ping":
             message.channel.sendMessage("Pong!");
+        case "generate":
+            if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
+            else message.channel.sendMessage("Generating...");
             break;
         default:
             message.channel.sendMessage("Invalid command")
