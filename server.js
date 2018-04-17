@@ -12,7 +12,7 @@ var fortunes = [
 
 var bot = new Discord.Client();
 
-bot.on("ready",function(){
+bot.on("ready",function() {
     console.log("READY");
     bot.user.setGame("/help | by skullymax");
 });
@@ -27,6 +27,7 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
         case "ping":
             message.channel.sendMessage("Pong!");
+            break;
         case "generate":
             if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
             else message.channel.sendMessage("Generating...");
