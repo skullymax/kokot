@@ -8,8 +8,6 @@ var fortunes = [
     "No",
     "Maybe",
     "never"
-    
-    return rand[Math.floor(Math.random()*rand.length)];
 ];
 
 var bot = new Discord.Client();
@@ -31,6 +29,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "generate":
+            if (args[1]) message.author.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
             message.channel.sendMessage("**Generating...**");
             break;
         default:
