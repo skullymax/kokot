@@ -29,7 +29,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "generate":
-            if (args[1]) message.author.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
+            if (args[1]) message.author.sendMessage(fortunes[Math.floor(Math.random()*rand.length)];
             message.channel.sendMessage("**Generating...**");
             break;
         default:
