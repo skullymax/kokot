@@ -28,8 +28,8 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "generate":
-            msg.author.sendMessage(doMagic8BallVoodoo());
-            message.channel.sendMessage("**Generating...**");
+        message.reply("**Generating...**")
+        message.author.sendMessage(doMagic8BallVoodoo())
             break;
         default:
             message.channel.sendMessage("Invalid command. Use /help for commands")
