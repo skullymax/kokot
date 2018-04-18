@@ -7,7 +7,7 @@ function doMagic8BallVoodoo() {
     var rand = ['zphoebus@hotmail.com:phreak9969', 'nealmu@gmail.com:raya99', 'red.double.blade@gmail.com:pizzaman123', 'joshua.alan.baker@gmail.com:theone', 'swoog@ymail.com:sonicheroes12', 'earthyelves@gmail.com:tambo3', 'swoog@ymail.com:sonicheroes12', 'ericcerpa01@hotmail.com:eric090401', 'ihaveaname:shadow19149', 'Hazagorski@yahoo.com:4662jack'];
 
     return rand[Math.floor(Math.random()*rand.length)];
-];
+};
 
 var bot = new Discord.Client();
 
